@@ -2,7 +2,7 @@
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-builder.WebHost.UseStaticWebAssets();
+
 
 var app = builder.Build();
 
