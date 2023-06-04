@@ -1,0 +1,39 @@
+﻿@model MVC1.Models.SimpleForm
+@{
+    ViewBag.Title = "Simple Form";
+}
+
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-6">
+            <h3>Contact Form</h3>
+            @using (Html.BeginForm("MakeJsonFile", "SimpleForm", FormMethod.Post))
+            {
+                
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">First Name</label>
+
+                        @Html.TextBoxFor(X => X.firstName, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(X => X.firstName, "", new { @class = "text-danger" })
+               </div>
+
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Last Name</label>
+                        @Html.TextBoxFor(x => x.lastName, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(X => X.lastName, "", new { @class = "text-danger" })
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Submit</button>
+               
+            }
+            </div>
+        </div>
+    </div>
+      
+
+
+
+
+
+
